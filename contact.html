@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact Rise Up Hoops Foundation | Polokwane, Limpopo</title>
+    <meta name="description" content="Contact Rise Up Hoops Foundation in Polokwane by WhatsApp, email or the message form.">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,6 +26,58 @@
         <p>WhatsApp: +27 82 456 7890</p>
         <p>Email: hello@riseuphoops.org.za</p>
         <p>Based in: Polokwane, Limpopo</p>
+    </section>
+
+    <section class="section alt-bg">
+        <h2>Send us a message</h2>
+        <form id="contact-form" class="enquiry-form" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="082 456 7890">
+                <span class="error" id="phone-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message-type">Type of message</label>
+                <select id="message-type" name="message-type" required>
+                    <option value="">Choose one</option>
+                    <option value="General">General question</option>
+                    <option value="Volunteering">Volunteering</option>
+                    <option value="Sponsorship">Sponsorship</option>
+                    <option value="Feedback">Feedback</option>
+                </select>
+                <span class="error" id="message-type-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required maxlength="500"></textarea>
+                <span class="error" id="message-error"></span>
+            </div>
+
+            <div class="form-submit">
+                <button type="submit" class="btn">Create Email</button>
+            </div>
+        </form>
+
+        <!-- Hidden until the form is filled in correctly -->
+        <div id="email-preview" hidden>
+            <h3>Your email is ready</h3>
+            <pre id="preview-text"></pre>
+            <a class="btn" id="send-email" href="#">Send in my email app</a>
+        </div>
     </section>
 </main>
 
