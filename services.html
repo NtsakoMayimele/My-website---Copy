@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Our Programmes | Rise Up Hoops Foundation Limpopo</title>
+    <meta name="description" content="Find a Rise Up Hoops after-school basketball programme in Seshego, Mankweng, Sebayeng or Lebowakgomo. Search by name or day.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 </head>
 <body>
 
 <header>
-
-
-    
     <div class="logo">RISE UP HOOPS</div>
     <nav>
         <a href="index.html">Home</a>
@@ -29,34 +28,32 @@
     </section>
 
     <section id="programmes" class="section alt-bg">
-        <div class="card-grid">
-            <div class="card">
-                <h3>Seshego</h3>
-                <p>Ages: 8-13</p>
-                <p>Tuesday &amp; Thursday (15:00 - 17:00)</p>
-            </div>
+        <input type="search" id="search" placeholder="Search by name or day" aria-label="Search programmes">
 
-            <div class="card">
-                <h3>Mankweng</h3>
-                <p>Ages: 10-15</p>
-                <p>Monday, Wednesday &amp; Friday (15:30 - 17:30)</p>
-            </div>
+        <!-- The cards are now added here by script.js -->
+        <div class="card-grid" id="programme-list"></div>
 
-            <div class="card">
-                <h3>Sebayeng</h3>
-                <p>Ages: 8-13</p>
-                <p>Tuesday &amp; Thursday (15:00 - 17:00)</p>
-            </div>
-
-            <div class="card">
-                <h3>Lebowakgomo</h3>
-                <p>Ages: 13-18</p>
-                <p>Wednesday &amp; Saturday (09:00 - 11:00)</p>
-            </div>
-        </div>
+        <h3 id="special-heading">
+            Special Programmes
+        </h3>
+        <p id="special-message">
+            We also run special programmes for children with disabilities and those in need of extra academic support. Please contact us for more information.
+        </p>
+        <p>
+            <img
+            id="special-image"
+            src="images/images%20(6).jpg"
+            alt="Rise Up Hoops coaches running a training session for children with disabilities"
+            width="400">
+        </p>
     </section>
 
     <section class="section">
+        <h2>Where to find us</h2>
+        <div id="map"></div>
+    </section>
+
+    <section class="section alt-bg">
         <h2>Our Six Commitments</h2>
         <ol class="commitments">
             <li>Every Kid Plays</li>
@@ -73,6 +70,7 @@
     <p>&copy; 2026 Rise Up Hoops Foundation</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>
